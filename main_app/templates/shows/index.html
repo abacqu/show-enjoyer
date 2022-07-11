@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Show List</h1>
+
+{% for show in shows %}
+<div class="card">
+    <a href="{% url 'detail' show.id %}">
+        <div class="card-content">
+            <span class="card-title">{{ show.name }}</span>
+            <p>Date: {{ show.date }}</p>
+            <p>Songs: {{ show.songs }}</p>
+            <p>Reflection: {{ show.reflection }}</p>
+
+        </div>
+    </a>
+</div>
+{% endfor %} {% endblock %}

@@ -24,6 +24,10 @@
           <ul class="right">
             <li><a href="/about">About</a></li>
             {% if user.is_authenticated %}
+            <li><a href="{% url 'shows_create' %}">Add Show</a></li>
+            <li><a href="{% url 'index' %}">My Shows</a></li>
+            <li><a href="{% url 'categories_index' %}">View All Categories</a></li>
+            <li><a href="{% url 'categories_create' %}">Add Category</a></li>
             <li><a href="{% url 'logout' %}">Log Out</a></li>
             {% else %}
             <li><a href="{% url 'signup' %}">Sign Up</a></li>
