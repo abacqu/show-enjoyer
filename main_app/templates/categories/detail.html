@@ -1,17 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Category Details</h1>
+<h1 class= "indigo-text text-lighten-2" style="font-family: 'Oswald', serif;">Category Details</h1>
 
-<div class="card">
+<div class="card indigo lighten-4" style="font-family: 'Oswald', serif;">
   <a href="{% url 'categories_detail' category.id %}">
-    <div class="card-content">
+    <div class="card-content white-text">
       <span class="card-title"
         >A {{category.name}}</span
       >
     </div>
     <div class="card-action">
-      <a href="{% url 'categories_update' category.id %}">Edit</a>
-      <a href="{% url 'categories_delete' category.id %}">Delete</a>
+      <a class= "indigo-text text-lighten-2" href="{% url 'categories_update' category.id %}">Edit</a>
+      <a class= "indigo-text text-lighten-2" href="{% url 'categories_delete' category.id %}">Delete</a>
     </div>
   </a>
 </div>

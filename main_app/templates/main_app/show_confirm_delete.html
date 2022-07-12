@@ -1,14 +1,15 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Delete Show</h1>
+<h1 class="indigo-text text-lighten-2" style="font-family: 'Oswald', serif;">Delete Show</h1>
 
-<h4>
+<h4 class="indigo-text text-lighten-2" style="font-family: 'Oswald', serif;">
   Are you sure you want to delete
-  <span class="teal-text">{{ object.name }}</span>?
+  <span class="indigo-text text-lighten-2">{{ object.name }}</span>?
 </h4>
 
 <form action="" method="POST">
   {% csrf_token %}
-  <input type="submit" value="Yes - Delete!" class="btn" />
+  <button class="btn indigo lighten-2" type="submit">YES - DELETE!</button>
+  <!-- <input type="submit" value="Yes - Delete!" class="btn" /> -->
   <a href="{% url 'detail' show.id %}">Cancel</a>
 </form>
 {% endblock %}

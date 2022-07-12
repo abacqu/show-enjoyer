@@ -1,11 +1,11 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Show List</h1>
+<h1 class="indigo-text text-lighten-2" style="font-family: 'Oswald', serif;">Show List</h1>
 
 {% for show in shows %}
-<div class="card">
+<div class="card indigo lighten-4" style="font-family: 'Oswald', serif;">
     <a href="{% url 'detail' show.id %}">
-        <div class="card-content">
+        <div class="card-content white-text">
             <span class="card-title">{{ show.name }}</span>
             <p>Date: {{ show.date }}</p>
             <p>Songs: {{ show.songs }}</p>

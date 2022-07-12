@@ -1,11 +1,11 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Categories List</h1>
+<h1 class="indigo-text text-lighten-2" style="font-family: 'Oswald', serif;">Categories List</h1>
 
 {% for category in object_list %}
-<div class="card">
+<div class="card indigo lighten-4" style="font-family: 'Oswald', serif;">
   <a href="{% url 'categories_detail' category.id %}">
-    <div class="card-content">
+    <div class="card-content white-text">
       <span class="card-title"
         >A {{category.name}}</span
       >

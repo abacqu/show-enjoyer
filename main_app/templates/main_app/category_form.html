@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %} {% if object %}
-<h1>Update {{ object.name }}</h1>
+<h1 class= "indigo-text text-lighten-2" style="font-family: 'Oswald', serif;">Update {{ object.name }}</h1>
 {% else %}
-<h1>Add Category</h1>
+<h1 class="indigo-text text-lighten-2" style="font-family: 'Oswald', serif;">Add Category</h1>
 {% endif %}
 
 <form action="" method="post">
@@ -10,7 +10,7 @@
     {{ form.as_table }}
   </table>
   <input
-    class="btn blue"
+    class="btn indigo lighten-2"
     type="submit"
     value="{% if object %} Update Category {% else %} Add Category {% endif %}"
   />

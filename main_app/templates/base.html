@@ -10,15 +10,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Oswald">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
   </head>
   <body>
     <header class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper indigo lighten-2" style="font-family: 'Oswald', serif;">
           <ul>
             <li>
-              <a href="/" class="left brand-logo">&nbsp;&nbsp;ShowEnjoyer</a>
+              <a href="/" class="left brand-logo"><i class="material-icons">headset</i>&nbsp;&nbsp;ShowEnjoyer</a>
             </li>
           </ul>
           <ul class="right">
@@ -37,10 +41,10 @@
         </div>
       </nav>
     </header>
-    <main class="container">{% block content %} {% endblock %}</main>
-    <footer class="page-footer">
-      <div class="right">
-        All Rights Reserved, &copy; 2022 Show Enjoyer &nbsp;
+    <main class="container indigo lighten-5">{% block content %} {% endblock %}</main>
+    <footer class="page-footer indigo lighten-2">
+      <div class="right indigo lighten-2" style="font-family: 'Oswald', serif;">
+        All Rights Reserved, &copy; 2022 ShowEnjoyer &nbsp;
       </div>
     </footer>
   </body>
