@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Sign Up</h1>
+<h1 class="indigo-text text-lighten-2" style="font-family: 'Oswald', serif;">Sign Up</h1>
 
 {% if error_message %}
 <p class="red-text">{{ error_message }}</p>
@@ -8,7 +8,8 @@
 
 <form method="post" action="{% url 'signup' %}">
   {% csrf_token %} {{ form.as_p }}
-  <input type="submit" class="btn" value="signup" />
+  <button class="btn indigo lighten-2" type="submit">Sign Up</button>
+  <!-- <input type="submit" class="btn" value="signup" /> -->
 </form>
 
 {% endblock %}
