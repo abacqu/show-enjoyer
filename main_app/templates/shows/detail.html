@@ -22,7 +22,9 @@
         {% for photo in show.photo_set.all %}
         <img class="responsive-img card-panel" src="{{photo.url}}" width="450" height="600" />
         {% empty %}
-        <div class="card-panel white-text center-align indigo lighten-4" style="font-family: 'Oswald', serif;">No Photos Uploaded</div>
+        <div class="col s12 right">
+            <div class="card white-text right indigo lighten-4" style="font-family: 'Oswald', serif;">No Photos Uploaded</div>
+        </div>
         {% endfor %}
         </div>
 
