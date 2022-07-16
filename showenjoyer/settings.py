@@ -80,6 +80,7 @@ DATABASES = {
     'default': {
         'ENGINE': config('DATABASE_URL'),
         'NAME': config('DB_NAME'),
+        
     }
 }
 
