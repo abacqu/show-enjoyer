@@ -49,6 +49,7 @@ class LoginTestCase(TestCase):
             'username': self.username,
             'password': self.password
         }, follow=True)
+        print('hi')
         self.assertEqual(response.status_code, 200)
         self.assertRedirects(response, "/")
         
