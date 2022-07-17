@@ -59,6 +59,7 @@ class ShowTestCase(TestCase):
         user.set_password('Password123')
         user.save()
         print("???????")
+        print("jenkins test")
         loggedin = Client.login(username='testusername', password='Password123')
         print("???", loggedin)
 
