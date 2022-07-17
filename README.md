@@ -19,7 +19,7 @@ Materialize
 
 # Getting Started
 
-User will arrive at the home page where they will have the option of signing up for an account or logging in. Once logged in, they will have access to the journaling features available within the application
+User will arrive at the home page where they will have the option of signing up for an account or logging in. Once logged in, they will have access to the journaling features available within the application.
 
 # Heroku Link
 
