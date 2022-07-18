@@ -1,6 +1,6 @@
 from django.forms import CharField, DateField
 from django.test import TestCase
-from .models import Show
+from .models import Show, Category
 from django.contrib.auth.models import User
 from django.test import Client
 
@@ -49,22 +49,39 @@ class LoginTestCase(TestCase):
             'username': self.username,
             'password': self.password
         }, follow=True)
-        print('hi')
         self.assertEqual(response.status_code, 200)
         self.assertRedirects(response, "/")
         
 
+# class ShowTemplateTestCase(TestCase):
+#     def setUp(self):
+#         user = User.objects.create_user(username='testusername')
+#         user.set_password('Password123')
+#         user.save()
+#         print("???????")
+#         print("jenkins sec test")
+#         loggedin = Client.login(username='testusername', password='Password123')
+#         print("???", loggedin)
+
+#     def test_show(self):
+#         response = self.client.get("/shows/create/")
+#         self.assertEqual(response.status_code, 200)
+#         self.assertTemplateUsed(response, template_name='show_form.html')
+
 class ShowTestCase(TestCase):
     def setUp(self):
-        user = User.objects.create_user(username='testusername')
-        user.set_password('Password123')
-        user.save()
-        print("???????")
-        print("jenkins sec test")
-        loggedin = Client.login(username='testusername', password='Password123')
-        print("???", loggedin)
+        Show.objects.create(name="testshow", date="10/25/06", songs="testsongs", reflection="testreflection")
+    
+    def show_created(self):
+        testshow = Show.objects.get(name="testshow")
+        self.assertEqual(testshow.songs(), "testsongs")
 
-    def test_show(self):
-        response = self.client.get("/shows/create/")
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, template_name='show_form.html')
+
+
+class CategoryTestCase(TestCase):
+    def setUp(self):
+        Category.objects.create(name="testcategory")
+
+    def category_created(self):
+        testcategory = Category.objects.get(name="testcategory")
+        self.assertEqual(testcategory.name)
